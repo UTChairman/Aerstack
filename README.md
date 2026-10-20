@@ -35,9 +35,14 @@ Both are optional; set them in `.env.local` for local use, or in your host's das
 | `NEXT_PUBLIC_SITE_URL` | `https://www.aerstack.com` | Absolute base for `robots.txt`, `sitemap.xml`, canonical tags and Open Graph URLs. Set this to the real domain on any deployment, or the SEO metadata will point at the fallback. |
 | `NEXT_PUBLIC_FORMSPREE_ENDPOINT` | the project's Formspree form | Where the contact and newsletter forms post. |
 
-Form submissions are rejected by Formspree unless the sending domain is registered in its dashboard,
-so forms will fail from a teammate's `localhost` until that domain is added — the rest of the site is
-unaffected.
+Submitting from `localhost` works as-is (verified end to end). A **deployed** domain has to be added
+to the Formspree dashboard, or it will reject posts from there.
+
+### A note for Windows
+
+Clone into a short path such as `C:\dev\aerstack`. Turbopack generates long chunk filenames, and from
+a deeply nested folder they can exceed the Windows path limit, which crashes `next dev` with
+`path length ... exceeds max length of filesystem`. `next build` is unaffected.
 
 ## Project layout
 
