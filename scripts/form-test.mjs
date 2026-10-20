@@ -1,0 +1,20 @@
+import puppeteer from "puppeteer";
+const b=await puppeteer.launch({headless:true,args:["--no-sandbox"]});
+const p=await b.newPage();
+await p.setViewport({width:1440,height:1000});
+const posts=[];
+p.on("response",async r=>{ if(r.request().method()==="POST" && r.url().includes("formspree")) posts.push({url:r.url(),status:r.status()}); });
+await p.goto("http://localhost:3000/contact-us",{waitUntil:"networkidle2"});
+await p.evaluate(async()=>{await new Promise(r=>{let y=0;const s=()=>{window.scrollBy(0,900);y+=900;if(y<document.body.scrollHeight)setTimeout(s,40);else r()};s()})});
+await new Promise(r=>setTimeout(r,1200));
+await p.type('input[name="name"]',"Claude Test");
+await p.type('input[name="email"]',"omartanvir584@gmail.com");
+await p.type('textarea[name="message"]',"Test submission verifying the Formspree wiring on the migrated Next.js site. Safe to ignore.");
+await Promise.all([ p.click('form button[type="submit"]'), new Promise(r=>setTimeout(r,6000)) ]);
+const msg = await p.evaluate(()=>{
+  const el=[...document.querySelectorAll('p[aria-live="polite"]')].map(e=>e.innerText.trim()).filter(Boolean);
+  return el;
+});
+console.log("POSTs:", JSON.stringify(posts));
+console.log("status message:", JSON.stringify(msg));
+await b.close();

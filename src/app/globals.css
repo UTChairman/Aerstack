@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+  Aerstack design tokens — extracted verbatim from the live Framer site.
+  Raw token hexes kept under their original names for 1:1 fidelity.
+*/
+@theme {
+  /* Brand + surfaces */
+  --color-brand: #f58327;
+  --color-bg: #0a0a0a;
+  --color-bg-2: #0d0d0d;
+  --color-surface: #1f1d1d;
+
+  /* Ink (dark text used on light/brand fills) */
+  --color-ink: #0d0d0d;
+  --color-ink-strong: #0a0a0a;
+
+  /* White + white-alpha (borders, overlays, muted text) */
+  --color-white: #ffffff;
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-05: rgba(255, 255, 255, 0.05);
+
+  /* Dark-alpha */
+  --color-black-10: rgba(13, 13, 13, 0.1);
+  --color-black-05: rgba(13, 13, 13, 0.05);
+  --color-muted-50: rgba(56, 64, 54, 0.5);
+
+  /* Fonts (wired to next/font CSS variables) */
+  --font-display: var(--font-unbounded);
+  --font-body: var(--font-satoshi);
+  --font-sans: var(--font-inter);
+
+  /*
+    Breakpoints matched to the Framer project exactly:
+      Phone   ≤ 809.98px   (design width 390)
+      Tablet  810–1199.98  (design width 810)
+      Desktop ≥ 1200px     (design width 1440)
+    so `md:` = tablet-and-up, `lg:` = desktop-wide.
+  */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1600px;
+}
+
+:root {
+  --background: var(--color-bg);
+  --foreground: var(--color-white);
+}
+
+html {
+  background: var(--background);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Satoshi", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Framer default: no tap highlight, smooth scroll baseline */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-ink-strong);
+}
