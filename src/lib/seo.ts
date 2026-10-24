@@ -68,8 +68,14 @@ export const ORGANISATION = {
   image: `${SITE_URL}${OG_IMAGE}`,
   description:
     "Aerstack builds websites, management software and AI workflows for small and medium businesses.",
-  email: "abdullahdilshad111@gmail.com",
+  email: "aerstack@gmail.com",
   telephone: "+92 310 6442188",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Islamabad",
+    addressCountry: "PK",
+  },
+  areaServed: "Worldwide",
   founder: [
     { "@type": "Person", name: "Abdullah Dilshad" },
     { "@type": "Person", name: "Umar Tanvir" },
@@ -78,7 +84,7 @@ export const ORGANISATION = {
     {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: "abdullahdilshad111@gmail.com",
+      email: "aerstack@gmail.com",
       telephone: "+92 310 6442188",
       availableLanguage: ["English"],
     },

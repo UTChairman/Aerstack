@@ -21,7 +21,7 @@ function PinIcon({ className }: { className?: string }) {
 }
 
 const CONTACTS = [
-  { Icon: Envelope, text: "abdullahdilshad111@gmail.com", href: "mailto:abdullahdilshad111@gmail.com" },
+  { Icon: Envelope, text: "aerstack@gmail.com", href: "mailto:aerstack@gmail.com" },
   { Icon: Phone, text: "+92 310 6442188", href: "tel:+923106442188" },
   { Icon: PinIcon, text: "We are Fully Remote", href: null },
 ];
