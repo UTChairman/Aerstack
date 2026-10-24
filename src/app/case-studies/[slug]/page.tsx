@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const cs = CASE_STUDIES.find((c) => c.slug === slug);
   return {
-    title: cs ? `${cs.detail.title} — Aerstack` : "Case Study — Aerstack",
+    title: cs ? `${cs.detail.title} | Aerstack` : "Our work | Aerstack",
     description: cs?.detail.subtitle,
     alternates: { canonical: `/case-studies/${slug}` },
   };

@@ -95,12 +95,15 @@ export default function ServicePageTemplate({ s }: { s: ServicePage }) {
 
       <Timeline heading={s.worksHeading} steps={s.steps} />
 
-      <Pricing
-        heading={s.pricingHeading}
-        cta={s.pricingCta}
-        toggle={s.pricingToggle}
-        plans={s.plans}
-      />
+      {/* Only services with published plans show a pricing section. */}
+      {s.plans && s.plans.length > 0 && (
+        <Pricing
+          heading={s.pricingHeading ?? "Pricing"}
+          cta={s.pricingCta ?? "GET STARTED"}
+          toggle={s.pricingToggle ?? []}
+          plans={s.plans}
+        />
+      )}
 
       <Faq heading={s.faqHeading} items={s.faq} />
     </main>

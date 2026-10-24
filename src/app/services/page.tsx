@@ -6,23 +6,23 @@ import { SERVICES_PAGE_CARDS } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
-  title: "Services — Aerstack",
+  title: "Services | Aerstack",
   description:
-    "Instant lead response, AI lead qualification, dead lead reactivation, full pipeline automation, MVP builds and web development.",
+    "Three services for small and medium businesses: websites that bring in calls, bookings and orders, custom management software including POS and inventory, and AI workflows that handle repetitive work.",
 };
 
 export default function ServicesPage() {
   return (
     <main className="flex w-full flex-col items-center justify-center">
       <PageBanner>
-        Discover
+        Three ways we
         <br />
-        Our Services
+        help businesses
       </PageBanner>
 
       <section className="flex w-full items-center justify-center gap-[60px] px-3 pb-[50px] md:px-10 md:pb-[80px] lg:pb-[100px]">
         <div className="flex w-full max-w-[1440px] flex-col items-center justify-center gap-10 md:max-w-[1000px] md:gap-[60px] lg:max-w-[1440px] lg:gap-2.5">
-          <div className="grid w-full grid-cols-1 gap-2.5 lg:grid-cols-2">
+          <div className="grid w-full grid-cols-1 gap-2.5 md:grid-cols-3">
             {SERVICES_PAGE_CARDS.map((s) => (
               <ServiceCard key={s.title} s={s} />
             ))}

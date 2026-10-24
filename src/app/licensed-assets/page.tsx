@@ -3,7 +3,7 @@ import { CREDITS_INTRO, ASSET_CREDITS } from "@/lib/credits";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/licensed-assets" },
-  title: "Licensed Assets — Aerstack",
+  title: "Licensed Assets | Aerstack",
   description: CREDITS_INTRO,
 };
 

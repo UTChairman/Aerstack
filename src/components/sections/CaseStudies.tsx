@@ -79,9 +79,9 @@ export default function CaseStudies() {
       {/* Heading */}
       <div className="flex w-full max-w-[1440px] flex-col items-center justify-center gap-2.5">
         <div className="flex flex-col items-center justify-center gap-2.5">
-          <Pill>Works</Pill>
+          <Pill>Our work</Pill>
           <h2 className="max-w-[800px] text-center font-display text-[28px] font-normal leading-[34px] tracking-[-1.2px] text-white md:text-[40px] md:leading-[44px] md:tracking-[-1.8px]">
-            Case Studies
+            Recent work
           </h2>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function CaseStudies() {
         </div>
       </div>
 
-      <ButtonPill href="/case-studies">View All Projects</ButtonPill>
+      <ButtonPill href="/case-studies">See all work</ButtonPill>
     </section>
   );
 }

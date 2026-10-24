@@ -11,7 +11,7 @@ export default function CalEmbed({ link }: { link: string }) {
   return (
     <iframe
       src={src}
-      title="Book a discovery call"
+      title="Book a free consultation"
       loading="lazy"
       className="size-full rounded-[20px] border-0 bg-transparent"
       allow="camera; microphone; fullscreen; clipboard-write"

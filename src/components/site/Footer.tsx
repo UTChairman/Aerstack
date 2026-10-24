@@ -6,8 +6,7 @@ const MENU = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Projects", href: "/case-studies" },
-  { label: "Blog", href: "/case-studies" },
+  { label: "Work", href: "/case-studies" },
   { label: "Review", href: "/review" },
   { label: "Contact", href: "/contact-us" },
 ];
@@ -22,7 +21,7 @@ function PinIcon({ className }: { className?: string }) {
 
 const CONTACTS = [
   { Icon: Envelope, text: "abdullahdilshad111@gmail.com", href: "mailto:abdullahdilshad111@gmail.com" },
-  { Icon: Phone, text: "+92-3106442188", href: "tel:+923106442188" },
+  { Icon: Phone, text: "+92 310 6442188", href: "tel:+923106442188" },
   { Icon: PinIcon, text: "We are Fully Remote", href: null },
 ];
 

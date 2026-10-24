@@ -9,9 +9,9 @@ import ValueCloud from "@/components/ui/ValueCloud";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About — Aerstack",
+  title: "About | Aerstack",
   description:
-    "A team that builds automated lead follow-up systems for marketing agencies tired of losing deals to slow response times.",
+    "A small team building websites, management software and AI workflows for small and medium businesses.",
 };
 
 type Person = {
@@ -29,19 +29,19 @@ const PEOPLE: Person[] = [
   {
     eyebrow: "About Founder",
     heading: "Meet The Founder",
-    lead: "Abdullah Dilshad is the technical brain behind Aerstack. As a certified n8n automation specialist, Abdullah has built and deployed dozens of automated workflows across CRM systems, AI integrations, and multi-channel communication tools. His obsession is simple — finding where businesses lose money in their processes and building systems that fix it permanently.",
-    body: "Before Aerstack, Abdullah spent years deepening his expertise in AI automation, API integrations, and workflow architecture. That hands-on experience is what allows Aerstack to deliver systems that actually work in the real world — not just in theory. When Abdullah is not building automation systems, he is studying the latest developments in AI and finding new ways to apply them to real business problems.",
-    tags: ["n8n Certified", "AI Automation Specialist", "Systems Builder"],
+    lead: "Abdullah Dilshad is the technical side of Aerstack. He builds the websites, the management systems and the automations, and has delivered a production POS system running across multiple branches of a working restaurant. His interest is simple: finding where a business loses time or money in its own process, and building something that fixes it for good.",
+    body: "Before Aerstack he spent years on automation, integrations and system architecture. That is the experience behind software that holds up during a busy service rather than only in a demo. When he is not building, he is usually working out how something new can be applied to an ordinary business problem.",
+    tags: ["Systems Builder", "Automation Specialist", "POS And Software"],
     img: "Fp009kglWkEICcmRi8ohingKhfQ.png",
     first: "Abdullah",
     last: "Dilsahd",
   },
   {
     eyebrow: "About Founder",
-    heading: "Meet The Co - Founder",
-    lead: "Umar Tanvir is the strategy and growth engine at Aerstack. With a sharp understanding of how marketing agencies operate, where their pipelines break, and what agency owners actually care about — Umar bridges the gap between technical solutions and real business outcomes.",
-    body: "He is the reason Aerstack speaks the language of agency owners instead of developers. Every offer, every message, and every client conversation is shaped by his instinct for what drives revenue decisions. His focus is on one thing — making sure every agency that works with Aerstack sees a clear, measurable return from day one.",
-    tags: ["Growth Strategist", "Agency Operations Expert", "Client Success Lead"],
+    heading: "Meet The Co Founder",
+    lead: "Umar Tanvir handles strategy and growth at Aerstack. He spends his time with business owners working out where the real problem is, which is often not the thing they first asked about, and turning that into something worth building.",
+    body: "He is the reason Aerstack talks like a business rather than a software company. Every scope and every conversation is shaped by what the work is actually worth to the owner. His focus is making sure the thing we build pays for itself rather than becoming another system nobody uses.",
+    tags: ["Strategy", "Business Operations", "Client Success"],
     img: "jkSwkK2SiRgIRv78OG8xQtvrDXg.png",
     first: "Umar",
     last: "Tanvir",
@@ -53,35 +53,35 @@ const STEPS = [
     n: "01",
     title: "Discovery Phase",
     body: [
-      "We start by auditing your current lead process from the moment a lead arrives to the moment someone actually speaks to them.",
-      "We map every lead source, measure your current response time, count how many follow-up touches your team makes, and calculate exactly how much revenue your broken pipeline is costing you every month.",
-      "No assumptions. Just numbers.",
+      "We start with how the business actually runs today, including the parts handled on paper, in a group chat or in somebody's head.",
+      "We find where the time goes, where things get dropped, and which of those is worth fixing first. Sometimes the answer is that you do not need what you came in asking for.",
+      "No assumptions. We look at the real process.",
     ],
   },
   {
     n: "02",
     title: "System Design",
     body: [
-      "Based on the audit, we design a custom automation system built specifically around your lead sources, your CRM, and your sales process.",
-      "Every workflow is mapped before a single node is built — so you can see exactly what will happen to every lead before we touch anything in your existing setup.",
+      "We design the website, the system or the workflow around the way your business already works, rather than asking your team to change to suit the software.",
+      "Everything is mapped out and shown to you before anything gets built, so you know exactly what you are getting while it is still cheap to change.",
     ],
   },
   {
     n: "03",
     title: "Implementation",
     body: [
-      "We build and test the entire system in an isolated environment before going anywhere near your live pipeline.",
-      "Once everything is tested and working perfectly we deploy it, connect it to your live lead sources, and go live.",
-      "Most systems are fully operational within 5 to 14 business days depending on complexity.",
+      "We build and test everything on a copy first, so nothing experimental touches your customers or a live service.",
+      "When it is working properly we put it live, connect it to the tools you already use, and train the people who will be using it daily.",
+      "Timelines depend on scope. A website or a single workflow is quick. Management software takes longer, and we tell you which before you commit.",
     ],
   },
   {
     n: "04",
     title: "Monitoring and Optimisation",
     body: [
-      "Going live is not the finish line. Every system we build is monitored, measured, and improved on an ongoing basis.",
-      "You receive a monthly performance report showing leads processed, response times, follow-up completion rates, and booking conversions.",
-      "We use that data to refine your sequences, adjust qualification thresholds, and make sure the system keeps improving every single month.",
+      "Going live is not the finish line. We stay close through the first weeks, when the real edge cases turn up.",
+      "You get a monthly summary of what the system handled and anything worth your attention.",
+      "As the business changes, so does the system. Adding a branch or changing how something works should not mean starting again.",
     ],
   },
 ];
@@ -216,19 +216,19 @@ export default function AboutPage() {
           <div className="flex w-full flex-col items-start justify-center gap-10 md:flex-row md:gap-[60px]">
             <div className="flex w-full flex-col gap-8 md:max-w-[650px]">
               <p className="font-body text-[20px] leading-[30px] tracking-[-0.8px] text-white-50 md:text-[30px] md:leading-[39px] md:tracking-[-1.2px]">
-                Let&apos;s get acquainted! A team that builds automated lead follow-up systems for{" "}
-                <span className="text-white">marketing agencies</span> who are tired of losing deals
-                to slow response times and manual follow-up. We are not a big agency. We do not do
-                everything. We do one thing — and we do it{" "}
-                <span className="text-brand">exceptionally well.</span>
+                Aerstack is a digital solutions company. We build{" "}
+                <span className="text-white">websites, management software and AI workflows</span>{" "}
+                for small and medium businesses. We are a small team, we do three things, and we do
+                them{" "}
+                <span className="text-brand">properly.</span>
               </p>
               <p className="font-body text-[20px] leading-[30px] tracking-[-0.8px] text-white-50 md:text-[30px] md:leading-[39px] md:tracking-[-1.2px]">
-                While you focus on running your agency, our systems make sure every lead gets{" "}
-                <span className="text-[#f2f2f2]">contacted, followed up, qualified, and booked</span>
-                . Automatically. Around the clock. No leads lost. No deals left on the table. No
-                manual chasing.{" "}
+                While you run the business, the systems we build keep the{" "}
+                <span className="text-[#f2f2f2]">enquiries answered, the stock counted and the
+                admin handled</span>
+                . Across every branch, at any hour, without anyone remembering to do it.{" "}
                 <span className="text-brand">
-                  Just a pipeline that works the way it always should have.
+                  Software that works the way the business already does.
                 </span>
               </p>
             </div>

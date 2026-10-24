@@ -1,20 +1,20 @@
-/** "Our History / Mission / Vision" accordion — from the Framer component controls. */
+/** "Our History / Mission / Vision" accordion on the about page. */
 export type HmvItem = { serial: string; title: string; body: string };
 
 export const HMV_ITEMS: HmvItem[] = [
   {
-    "serial": "01.",
-    "title": "Our History",
-    "body": "Aerstack started with a simple observation.\n\nWe kept seeing the same problem everywhere we \nlooked. Marketing agencies spending thousands \non ads, generating solid leads, and then losing \nmost of them — not to bad offers or weak \ntargeting, but to something far more fixable.\n\nSlow follow-up. No system. No structure.\n\nLeads sitting in spreadsheets for days. Sales \nreps following up once and giving up. Qualified \nbuyers going cold simply because nobody replied \nfast enough.\n\nWe knew the technology to fix this existed. \nn8n, OpenAI, CRM integrations, automated \nsequences — the tools were all there. They \njust needed to be wired together properly and \npointed at the right problem.\n\nSo we built Aerstack to do exactly that.\n\nOne niche. One problem. One focused solution."
+    serial: "01.",
+    title: "Our History",
+    body: "Aerstack started with a simple observation.\n\nThe same problems kept turning up in business after business, and almost none of them were really about the work itself.\n\nA website that nobody could use properly on a phone. Stock counted by hand and typed into a spreadsheet that was wrong by lunchtime. Enquiries sitting unanswered because the person who answers them was serving customers. The same question answered by hand twenty times a week.\n\nNone of it was complicated. It was just never anybody's job to fix it.\n\nWe began with automation, because that is where the wasted time was easiest to see. Clients then asked whether we could build the system underneath it, and whether we could fix the website it all pointed at.\n\nSo that is what Aerstack became. Three things that work together: the website people find you through, the software that runs the business, and the automations that take the repetitive work off your team.",
   },
   {
-    "serial": "02.",
-    "title": "Our Mission",
-    "body": "To make sure no marketing agency ever loses \na deal to slow follow-up again.\n\nWe build automated lead follow-up and \nqualification systems that work around the \nclock — so agency owners can focus on \ndelivering great work for their clients \ninstead of manually chasing leads that \nshould have converted weeks ago."
+    serial: "02.",
+    title: "Our Mission",
+    body: "To give small and medium businesses the kind of systems that usually only large companies can afford.\n\nNot software you have to bend your business around, and not a website you need a developer to change. Tools built around how you already work, handed over in a state you can actually run yourself.",
   },
   {
-    "serial": "03.",
-    "title": "Our Vision",
-    "body": "A world where every marketing agency — \nregardless of size or team capacity — has \naccess to a sales pipeline that works \nautomatically, responds instantly, and \nnever drops the ball.\n\nWe believe the gap between a lead arriving \nand a deal getting closed should be handled \nby systems, not stress.\n\nThat is the future we are building toward. \nOne agency at a time."
-  }
+    serial: "03.",
+    title: "Our Vision",
+    body: "A world where running a business does not mean doing the same admin every day until something gets dropped.\n\nWhere a restaurant owner can see every branch from one screen, a clinic stops losing appointments to forgetfulness, and a shop knows what is selling without counting it by hand.\n\nThe repetitive part should be handled by systems. The judgement, the craft and the customers should be left to people.",
+  },
 ];

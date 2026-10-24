@@ -8,12 +8,24 @@ import Footer from "@/components/site/Footer";
 import SiteChrome from "@/components/site/SiteChrome";
 
 const description =
-  "Aerstack is an AI-driven agency focused on automating lead generation and management for marketing agencies. We streamline the entire process from capturing and qualifying leads to nurturing and conversion.";
+  "Aerstack is a digital solutions company for small and medium businesses. We build websites that bring in calls, bookings and orders, management software such as POS, inventory, staff and reporting systems, and AI workflows that handle repetitive work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Aerstack - Automate Your Leads Pipeline",
+  title: "Aerstack | Digital solutions for businesses",
   description,
+  keywords: [
+    "website design",
+    "business website",
+    "POS system",
+    "inventory management software",
+    "restaurant POS",
+    "custom management software",
+    "AI workflows",
+    "business automation",
+    "WhatsApp automation",
+    "appointment reminders",
+  ],
   robots: { index: true, follow: true, "max-image-preview": "large" } as Metadata["robots"],
   icons: {
     icon: "/favicon-aerstack.png",
@@ -21,13 +33,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Aerstack - Automate Your Leads Pipeline",
+    title: "Aerstack | Digital solutions for businesses",
     description,
     images: [{ url: "/images/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aerstack - Automate Your Leads Pipeline",
+    title: "Aerstack | Digital solutions for businesses",
     description,
     images: ["/images/og-image.png"],
   },

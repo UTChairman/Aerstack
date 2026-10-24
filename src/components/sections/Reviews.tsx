@@ -67,6 +67,10 @@ function ReviewItem({ r }: { r: Review }) {
 }
 
 export default function Reviews() {
+  // Nothing to show until real customer quotes are added to REVIEWS, and an
+  // empty scrolling column would read as a broken section.
+  if (REVIEWS.length === 0) return null;
+
   const loop = [...REVIEWS, ...REVIEWS];
   return (
     <section className="relative flex w-full items-center justify-center gap-[60px] overflow-hidden md:pt-10 lg:pt-0">

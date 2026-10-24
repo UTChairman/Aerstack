@@ -7,17 +7,17 @@ import Pill from "@/components/ui/Pill";
 const spring = { type: "spring" as const, stiffness: 118, damping: 30, mass: 1 };
 
 const TAGS: { label: string; rot: number }[] = [
-  { label: "Instant Response", rot: -14 },
-  { label: "AI Qualification", rot: 8 },
-  { label: "Follow-Up Automation", rot: -8 },
-  { label: "Lead Scoring", rot: 5 },
-  { label: "Auto-Booking", rot: -10 },
-  { label: "CRM Integration", rot: 4 },
-  { label: "Pipeline Visibility", rot: -4 },
-  { label: "SMS Outreach", rot: 7 },
-  { label: "Email Sequences", rot: -6 },
+  { label: "Websites", rot: -14 },
+  { label: "Point Of Sale", rot: 8 },
+  { label: "Inventory", rot: -8 },
+  { label: "Staff Management", rot: 5 },
+  { label: "Reporting", rot: -10 },
+  { label: "Online Booking", rot: 4 },
+  { label: "WhatsApp Replies", rot: -4 },
+  { label: "Reminders", rot: 7 },
+  { label: "Multi Branch", rot: -6 },
   { label: "Reliability", rot: 9 },
-  { label: "No Manual Work", rot: -3 },
+  { label: "Less Admin", rot: -3 },
 ];
 
 function Atom() {
@@ -38,13 +38,14 @@ export default function WhyUs() {
           <div className="flex w-full flex-col items-start justify-start gap-3 md:flex-row md:items-center md:gap-6">
             <Pill>Why Us</Pill>
             <h2 className="font-display text-[28px] font-normal leading-[34px] tracking-[-1.2px] text-white md:text-[40px] md:leading-[44px] md:tracking-[-1.8px]">
-              Our Specialities
+              What we are good at
             </h2>
           </div>
           <div className="flex w-full justify-end">
             <p className="max-w-[500px] font-body text-[18px] leading-[27px] tracking-[-0.36px] text-white opacity-60">
-              We do one thing exceptionally well. We build automated lead follow-up and
-              qualification systems that turn the leads you already have into booked calls.
+              Three services that work together. The site people find you through, the
+              system that runs your day, and the automations that take the repetitive work
+              off your team.
             </p>
           </div>
         </div>
@@ -84,14 +85,14 @@ export default function WhyUs() {
                   (Seconds)
                 </span>
                 <span className="font-display text-[20px] font-normal uppercase leading-[26px] tracking-[-0.4px] text-white">
-                  Average Lead Response Time
+                  To answer an enquiry
                 </span>
               </div>
               <div className="relative rounded-[20px] py-2.5 pr-2.5 backdrop-blur-[5px]">
                 <p className="font-body text-[16px] leading-[24px] text-white opacity-80">
-                  Every lead that comes into  your pipeline gets a personalised response  in under
-                  60 seconds. Day or night.  Weekend or holiday. The system never  sleeps and never
-                  misses.
+                  An enquiry on WhatsApp, email or your website gets a useful reply in under
+                  a minute. Day or night, weekend or holiday. Nobody has to stop serving
+                  customers to answer it.
                 </p>
               </div>
             </div>
@@ -100,16 +101,15 @@ export default function WhyUs() {
             <div className="flex min-h-[460px] flex-[470] flex-col items-center justify-between rounded-[30px] bg-[#1f1d1d] p-[30px]">
               <div className="flex w-full flex-col items-start">
                 <span className="font-display text-[64px] font-normal leading-[1.1] text-white md:text-[96px] md:leading-[115.2px]">
-                  2-3x
+                  3
                 </span>
                 <span className="font-display text-[20px] font-normal uppercase leading-[26px] tracking-[-0.4px] text-white">
-                  Increase
+                  Core services
                 </span>
               </div>
               <p className="w-full font-body text-[16px] leading-[24px] text-white opacity-80">
-                Agencies using our automated  follow-up and qualification systems  typically see 2
-                to 3 times more booked  discovery calls within the first 60 days  — from the exact
-                same lead volume they  were already generating.
+                Websites, management software and AI workflows. Start with the one that is
+                costing you the most right now and add the others when they earn their place.
               </p>
             </div>
           </motion.div>
@@ -150,16 +150,16 @@ export default function WhyUs() {
             <div className="flex min-h-[460px] flex-[695] flex-col items-end justify-between rounded-[30px] bg-brand p-[30px]">
               <div className="flex w-full flex-col items-end">
                 <span className="text-right font-display text-[18px] font-normal uppercase leading-[26px] tracking-[-0.4px] text-ink-strong md:text-[20px]">
-                  Of leads never get followed up
+                  Services, one team
                 </span>
                 <span className="font-display text-[64px] font-normal leading-[1.1] text-ink-strong md:text-[96px] md:leading-[115.2px]">
-                  70%
+                  1
                 </span>
               </div>
               <p className="w-full font-body text-[16px] leading-[24px] text-ink-strong opacity-90">
-                Research shows 70% of leads  are abandoned after just one contact.  Our system
-                follows up every single lead  7 times over 14 days automatically —  recovering the
-                revenue most agencies  never knew they were losing.
+                Websites, management software and AI workflows built by the same team, so
+                the parts actually fit together. Your site, your system and your automations
+                are not three suppliers blaming each other.
               </p>
             </div>
           </motion.div>

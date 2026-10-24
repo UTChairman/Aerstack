@@ -5,17 +5,18 @@ import { CASE_STUDIES } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/case-studies" },
-  title: "Projects — Aerstack",
-  description: "Real results from automated lead follow-up and qualification systems.",
+  title: "Our work | Aerstack",
+  description:
+    "Websites, management software and AI workflows we have built for small and medium businesses, including a production POS system for a multi branch restaurant.",
 };
 
 export default function CaseStudiesPage() {
   return (
     <main className="flex w-full flex-col items-center justify-center">
       <PageBanner>
-        Check Our Works With
+        Things we have
         <br />
-        Real Results
+        built and shipped
       </PageBanner>
 
       {/* Rows — gap 42, px 40, pb 100 */}

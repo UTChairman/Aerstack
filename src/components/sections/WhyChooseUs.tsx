@@ -14,36 +14,36 @@ const Duo = ({ dim, solid, ...p }: SVGProps<SVGSVGElement> & { dim: string; soli
 /* Icons extracted verbatim from the live /services page */
 const ITEMS = [
   {
-    title: "Proven Track Record",
-    body: "We have built a reputation as a trusted and reliable partner in achieving business success.",
+    title: "Delivered, Not Demoed",
+    body: "Our POS system runs in production across multiple branches of a working restaurant. We finish what we start.",
     dim: "M94.81,192,65.36,214.24a8,8,0,0,1-12.81-4.51L40.19,154.1a8,8,0,0,1,1.66-6.86l30.31-36.33C71,134.25,76.7,161.43,94.81,192Zm119.34-44.76-30.31-36.33c1.21,23.34-4.54,50.52-22.65,81.09l29.45,22.24a8,8,0,0,0,12.81-4.51l12.36-55.63A8,8,0,0,0,214.15,147.24Z",
     solid:
       "M128,120a16,16,0,1,0-16-16A16,16,0,0,0,128,120Zm93.85,20.42-12.36,55.63a16,16,0,0,1-25.61,9L152,181.32a123.05,123.05,0,0,1-48,0L72.12,205a16,16,0,0,1-25.61-9L34.15,140.42a16.08,16.08,0,0,1,3.32-13.71l31.83-38.2a115.63,115.63,0,0,1,7.33-25.26c11.79-27.63,31.14-40.51,44.07-46.49a16,16,0,0,1,13.4,0c12.93,6,32.28,18.86,44.07,46.49a115.63,115.63,0,0,1,7.33,25.26l31.83,38.2A16.08,16.08,0,0,1,221.85,140.42Z",
   },
   {
     title: "Tailored Solutions",
-    body: "We offer personalized solutions tailored to your specific goals, audience, and industry.",
+    body: "We build around how your business already works rather than making your team adapt to someone else's software.",
     dim: "M152,128a24,24,0,1,1-24-24A24,24,0,0,1,152,128Z",
     solid:
       "M200,152a31.84,31.84,0,0,0-19.53,6.68l-23.11-18A31.65,31.65,0,0,0,160,128c0-.74,0-1.48-.08-2.21l13.23-4.41A32,32,0,1,0,168,104c0,.74,0,1.48.08,2.21l-13.23,4.41A32,32,0,0,0,128,96a32,32,0,1,0,0,64,31.85,31.85,0,0,0,19.53-6.68l23.11,18A31.65,31.65,0,0,0,168,176a32,32,0,1,0,32-24Zm0-64a16,16,0,1,1-16,16A16,16,0,0,1,200,88ZM128,144a16,16,0,1,1,16-16A16,16,0,0,1,128,144Zm72,48a16,16,0,1,1,16-16A16,16,0,0,1,200,192Z",
   },
   {
-    title: "Client-Centric Focus",
-    body: "Your success is our priority. We prioritize understanding your business goals.",
+    title: "Yours To Run",
+    body: "You own what we build, and the parts you need to change regularly are yours to change without calling us.",
     dim: "M160,112a32,32,0,1,1-32-32A32,32,0,0,1,160,112Z",
     solid:
       "M224,40V76a8,8,0,0,1-16,0V48H180a8,8,0,0,1,0-16h36A8,8,0,0,1,224,40Zm-8,132a8,8,0,0,0-8,8v28H180a8,8,0,0,0,0,16h36a8,8,0,0,0,8-8V180A8,8,0,0,0,216,172ZM76,208H48V180a8,8,0,0,0-16,0v36a8,8,0,0,0,8,8H76a8,8,0,0,0,0-16ZM40,84a8,8,0,0,0,8-8V48H76a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8V76A8,8,0,0,0,40,84Z",
   },
   {
     title: "Transparent Communication",
-    body: "We believe in open and honest communication every step of the way.",
+    body: "You get a clear scope and a realistic timeline before any work starts, and we tell you if you do not need something.",
     dim: "M232,152v64a8,8,0,0,1-8,8H160a72,72,0,0,1-67.9-48H96a72,72,0,0,0,72-72h0a71.83,71.83,0,0,0-4.07-23.88h0A72,72,0,0,1,232,152Z",
     solid:
       "M169.57,72.59A80,80,0,0,0,16,104v64a16,16,0,0,0,16,16H86.67A80.15,80.15,0,0,0,160,232h64a16,16,0,0,0,16-16V152A80,80,0,0,0,169.57,72.59ZM32,104a64,64,0,1,1,64,64H32ZM224,216H160a64.14,64.14,0,0,1-55.68-32.43A79.93,79.93,0,0,0,174.7,89.71,64,64,0,0,1,224,152Z",
   },
   {
     title: "Dedicated Support",
-    body: "Your success is our priority, and we're here to support you every step of the way.",
+    body: "We stay close through the first weeks after launch, when the real edge cases turn up, and we are reachable after that.",
     dim: "M16,152H48v56H16a8,8,0,0,1-8-8V160A8,8,0,0,1,16,152ZM192.54,40A39.12,39.12,0,0,0,156,64a39.12,39.12,0,0,0-36.54-24C97.67,40,80,58.31,80,80c0,14.56,7,27.71,16.73,40H140a20,20,0,0,1,0,40h4l37.78-8.68C203.82,135.07,232,109.23,232,80,232,58.31,214.33,40,192.54,40Z",
   },
   {

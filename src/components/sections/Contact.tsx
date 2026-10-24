@@ -57,7 +57,7 @@ export default function Contact() {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="joewantsanAutomation@gmail.com"
+                placeholder="you@yourbusiness.com"
                 className={field}
               />
             </div>

@@ -7,7 +7,7 @@ const VALUES: { label: string; rot: number; x: number }[] = [
   { label: "Positive Experience", rot: -4, x: -65 },
   { label: "Trustworthiness", rot: 5, x: 107 },
   { label: "Customer Focus", rot: -6, x: -98 },
-  { label: "Long-Term Relationships", rot: 3, x: 60 },
+  { label: "Long Term Relationships", rot: 3, x: 60 },
   { label: "Innovation", rot: -3, x: -5 },
   { label: "Collaboration", rot: 7, x: 100 },
   { label: "Personalization", rot: -5, x: -53 },

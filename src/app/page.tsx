@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
+import Audience from "@/components/sections/Audience";
 import Brands from "@/components/sections/Brands";
 import Stats from "@/components/sections/Stats";
 import CaseStudies from "@/components/sections/CaseStudies";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main className="flex w-full flex-col items-center justify-center">
         <Hero />
         <Services />
+        <Audience />
         <Brands />
         <Stats />
         <CaseStudies />

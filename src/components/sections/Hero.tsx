@@ -7,14 +7,7 @@ import ButtonPill from "@/components/ui/ButtonPill";
 // Framer "spring-physics 212 85 1"
 const spring = { type: "spring" as const, stiffness: 212, damping: 85, mass: 1 };
 
-const AVATARS = [
-  "dUseUtuxWZALl1W4o3xjq8KWc.jpg",
-  "K6cUNifhQFa6qEX3kqNwfqMkiY.jpg",
-  "KuIBzI0VbhnNU4FBscAHrIRO2DQ.jpg",
-  "hn4bVCIy3rXGNQvvwT9Qi3YKiKU.jpg",
-];
-
-const TICKER = "Best Marketing Automation Agency";
+const TICKER = "Websites. Management Software. AI Workflows.";
 
 export default function Hero() {
   return (
@@ -39,14 +32,14 @@ export default function Hero() {
         <div className="flex w-full flex-col items-center justify-center gap-5">
           {/* Headline — flex wrap row, maxW 820, gap 10 */}
           <h1 className="flex max-w-[820px] flex-row flex-wrap items-center justify-center gap-[10px] text-center font-display text-[40px] font-normal leading-[0.92] tracking-[-1.6px] text-white sm:text-[54px] md:text-[70px] md:leading-[63px] md:tracking-[-3px]">
-            <span className="max-w-[740px]">Stop Chasing</span>
+            <span className="max-w-[740px]">Digital</span>
 
-            {/* "Leads" — orange box rotated +3deg, text counter-rotated -3deg */}
+            {/* Highlighted word — orange box rotated +3deg, text counter-rotated -3deg */}
             <span className="inline-flex rotate-[3deg] items-center justify-center bg-brand">
-              <span className="inline-block -rotate-[3deg] px-1 text-ink-strong">Leads</span>
+              <span className="inline-block -rotate-[3deg] px-1 text-ink-strong">solutions</span>
             </span>
 
-            <span className="max-w-[740px]">Let&nbsp; Automation</span>
+            <span className="max-w-[740px]">for</span>
 
             {/* Megaphone — 73px orange circle, icon rotated -16deg */}
             <span className="inline-flex size-[48px] shrink-0 items-center justify-center overflow-hidden rounded-[180px] bg-brand md:size-[73px]">
@@ -59,14 +52,14 @@ export default function Hero() {
               />
             </span>
 
-            <span className="max-w-[740px]">Chase them for you.</span>
+            <span className="max-w-[740px]">businesses.</span>
           </h1>
 
           {/* Subhead — Satoshi 18/27, -0.36px, white 80%, maxW 600 */}
           <p className="max-w-[600px] text-center font-body text-[18px] font-normal leading-[27px] tracking-[-0.36px] text-white-80">
-            We build automated lead follow-up and qualification systems for marketing
-            agencies — so every lead gets contacted in under 60 seconds and followed up
-            for 14 days, without your team lifting a finger.
+            We build websites, management software and AI workflows for small and medium
+            businesses. One team for the site people find you through, the system that runs
+            your day, and the automations that take the repetitive work off your team.
           </p>
         </div>
 
@@ -123,35 +116,20 @@ export default function Hero() {
       {/* Floating glass badge — 368x162, overhangs bottom by 70px */}
       <div className="absolute bottom-[-70px] left-1/2 z-30 flex w-[368px] max-w-[calc(100%-32px)] -translate-x-1/2 flex-col items-start justify-center gap-2.5 overflow-hidden rounded-[40px] border border-white-15 bg-white-05 p-5 backdrop-blur-[5px]">
         <p className="font-display text-[20px] font-normal uppercase leading-[26px] tracking-[-0.4px] text-white">
-          An Ai Automation Agency.
+          A Digital Solutions Company.
         </p>
         <div className="h-px w-full bg-white-10" />
-        <div className="flex w-full items-center gap-2.5">
-          {/* Avatar stack — 49px, 38px apart */}
-          <div className="flex items-center">
-            {AVATARS.map((a, i) => (
-              <span
-                key={a}
-                className="relative size-[49px] overflow-hidden rounded-full bg-black-05"
-                style={{ marginLeft: i === 0 ? 0 : -11, zIndex: i }}
-              >
-                <Image src={`/images/${a}`} alt="" fill sizes="49px" className="object-cover" />
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="flex gap-[3px] text-[#ff8442]" aria-hidden>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <svg key={i} width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 15.9 4.8 18.6l1-5.8L1.5 8.7l5.9-.9L10 1.5Z" />
-                </svg>
-              ))}
-            </div>
-            <span className="whitespace-nowrap font-body text-[13px] leading-none text-white">
-              10+ 5 Star Reviews
-            </span>
-          </div>
-        </div>
+        {/* What we do. This previously held a stock avatar stack and a star
+            rating, neither of which could be substantiated, so it now states
+            the three services instead. */}
+        <ul className="flex w-full list-none flex-col gap-1.5">
+          {["Websites", "Management software", "AI workflows"].map((s) => (
+            <li key={s} className="flex items-center gap-2.5">
+              <span aria-hidden className="size-1.5 shrink-0 rounded-full bg-brand" />
+              <span className="font-body text-[14px] leading-[20px] text-white-80">{s}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

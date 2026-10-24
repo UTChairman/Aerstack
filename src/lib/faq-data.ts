@@ -1,34 +1,33 @@
-// FAQ content recovered from the Framer component controls ($control__question /
-// $control__answer). Home and About share this set.
+// Shared FAQ set used by the home page and the about page.
 export type FaqItem = { q: string; a: string };
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    "q": "What exactly does Aerstack do?",
-    "a": "We build automated lead follow-up and qualification systems for marketing agencies. When a new lead comes in, our system responds within 60 seconds, follows up automatically for 14 days, and filters serious buyers from time-wasters — all without your team doing anything manually."
+    q: "What exactly does Aerstack do?",
+    a: "We are a digital solutions company. We build three things: websites that bring in calls, bookings and orders, management software such as POS, inventory, staff and reporting systems, and AI workflows that handle repetitive work like replying to enquiries, confirming bookings and sending reminders. Most clients start with one and add the others later.",
   },
   {
-    "q": "How quickly can the system be live?",
-    "a": "Most systems are live within 5 to 14 business days depending on which package you choose. The Starter system typically goes live in 5 to 7 days. The full pipeline system takes 10 to 14 days. We build and test everything before touching your live setup so there is zero disruption to your existing process."
+    q: "What kind of businesses do you work with?",
+    a: "Small and medium businesses of most kinds. Restaurants and cafes, clinics and practices, retail and wholesale, service businesses and agencies. If your business takes enquiries, bookings or orders, or your team repeats the same admin every day, we can usually help.",
   },
   {
-    "q": "Do I need any technical knowledge to use this?",
-    "a": "None at all. We handle the entire build, testing, and deployment. Once it is live you will receive a simple one-page guide explaining what the system does and what to do if you ever need support. Your only job is to show up for the booked calls."
+    q: "Do I have to buy all three services?",
+    a: "No. Each one stands on its own. Plenty of clients start with a website, or with one automation that is costing them the most time, and go from there. We will tell you honestly if you do not need something yet.",
   },
   {
-    "q": "What tools and CRMs do you integrate with?",
-    "a": "We integrate with GoHighLevel, HubSpot, Facebook Lead Ads, Google Ads, Typeform, Calendly, Cal.com, Twilio, SendGrid, Slack, Instagram, and most other major marketing and CRM tools. If you use something not on this list, ask us — chances are we can connect it."
+    q: "How long does a project take?",
+    a: "A website is usually a matter of weeks. A single automation is often live within a week. Management software depends entirely on scope and takes longer. We give you a realistic timeline after the first conversation rather than a number designed to win the work.",
   },
   {
-    "q": "What if I do not have a CRM yet?",
-    "a": "No problem. We recommend GoHighLevel for most marketing agencies and can set up a basic account for you as part of the onboarding process. You do not need to have anything in place before we start. We will build the full setup from scratch."
+    q: "Do I need technical knowledge?",
+    a: "None. We handle the build, the testing and the launch. At handover you get a short guide covering what you can change yourself and who to contact if you need something more. Anything you will want to update regularly is made editable by you.",
   },
   {
-    "q": "How is this different from just hiring another salesperson?",
-    "a": "A salesperson costs $3,000 to $5,000 per month, works 8 hours a day, takes holidays, and can only handle so many leads at once. Our system costs a fraction of that, works 24 hours a day 7 days a week, responds to every single lead in under 60 seconds, and never has an off day. It does not replace your sales team — it makes sure they only spend time on leads that are actually worth their attention."
+    q: "Can you work with the tools we already use?",
+    a: "Usually, yes. We connect to booking and calendar tools, messaging platforms, email, spreadsheets, payment providers and most common business systems. Sometimes the right answer is to connect to what you have rather than replace it, and we will say so.",
   },
   {
-    "q": "Do you guarantee results?",
-    "a": "We guarantee the system will be built, fully tested, and live within the agreed timeframe. We also guarantee it will function exactly as described. Results in terms of booked calls and closed deals depend on your lead volume and quality — but we work with you through the first 60 days to optimise the system and maximise your outcomes."
-  }
+    q: "What does it cost?",
+    a: "It depends on what you need, so we do not publish one price for everything. Tell us about your business on a free consultation and we will come back with a clear scope and a fixed figure before any work starts. No ongoing commitment is required to have that conversation.",
+  },
 ];

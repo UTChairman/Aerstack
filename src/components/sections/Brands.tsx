@@ -14,7 +14,7 @@ const LOGOS = [
 ];
 
 export default function Brands({
-  eyebrow = "Brands Collaboraations",
+  eyebrow = "Brands Collaborations",
   heading = "Brands that trust us",
 }: {
   eyebrow?: string;

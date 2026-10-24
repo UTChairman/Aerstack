@@ -2,19 +2,16 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.aerstack.com";
 
-/** Static routes, mirroring the live sitemap. Case-study details are appended from data. */
+/** Static routes. Project detail pages are appended from data. */
 export const STATIC_ROUTES = [
   "/",
   "/about",
   "/services",
+  "/services/websites",
+  "/services/software",
+  "/services/automation",
   "/case-studies",
   "/review",
   "/contact-us",
   "/licensed-assets",
-  "/service-ilr",
-  "/service-webdev",
-  "/service-mvp",
-  "/service-alq",
-  "/service-dlr",
-  "/service-fullpipe",
 ] as const;
