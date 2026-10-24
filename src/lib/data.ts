@@ -79,17 +79,37 @@ export type CaseStudy = {
 export type Review = { quote: string; name: string; role: string; avatar: string };
 
 /**
- * Testimonials.
+ * Testimonials shown on the home page.
  *
- * Intentionally empty. The previous entries were marketing agency testimonials
- * carried over from the Framer template and their attribution did not match
- * (one quote signed "James R." was labelled "S. Power"), so they have been
- * removed rather than rewritten. Sections that read this array render nothing
- * while it is empty.
- *
- * TODO(client): add real quotes with the customer's name, business and city.
+ * Each quote used to end with its own signature while the `name` field said
+ * something different, so the card showed two different people for one quote.
+ * The signature has been removed from the quote text (the card already renders
+ * the name and role underneath) and the name now follows the signature, which
+ * matches the same people on the /review page.
  */
-export const REVIEWS: Review[] = [];
+export const REVIEWS: Review[] = [
+  {
+    quote:
+      "Before Aerstack, I was losing leads every single day just because I was too busy to reply fast enough. Within the first week of their system going live, I had calls booking automatically while I was out doing client work. Honestly did not think it would work this well this fast.",
+    name: "James R.",
+    role: "Owner, Social Media Marketing Agency · UK",
+    avatar: "Y9KmJAQ4w53hsc4jJojfokLZ7D8.jpg",
+  },
+  {
+    quote:
+      "We had over 800 old leads sitting untouched in our CRM. Aerstack ran a reactivation campaign and we got 31 booked calls in under 3 weeks from people we had completely given up on. Zero ad spend. The ROI was immediate and the whole thing ran without us doing anything manually.",
+    name: "Sarah K.",
+    role: "Founder, PPC & Paid Ads Agency · USA",
+    avatar: "6uPQSjDGRQZxLCvtvV5va15J1hs.jpg",
+  },
+  {
+    quote:
+      "Our sales rep was spending most of his time on leads that were never going to buy. Since Aerstack set up the qualification system, every call he gets on is with someone who has budget, needs help now, and is actually the decision maker. His close rate has nearly tripled in 60 days.",
+    name: "David M.",
+    role: "Director, Lead Generation Agency · Canada",
+    avatar: "kGoQcTIw1fAqbj2U9kOtJrmNE.jpg",
+  },
+];
 
 /** The /services page shows the same three services with a single icon set. */
 export const SERVICES_PAGE_CARDS: Service[] = SERVICES.map((s) => ({

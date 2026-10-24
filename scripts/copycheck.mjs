@@ -1,11 +1,14 @@
-// Scans the rendered text of every route for the client's copy rules:
-//   no hyphens, no en/em dashes, and "Aerstack" never "AerStack".
+// Scans the rendered text of every route in the sitemap for the client's copy
+// rules: no hyphens, no en/em dashes, and "Aerstack" never "AerStack".
 import puppeteer from "puppeteer";
 
-const ROUTES = ["/", "/about", "/services", "/services/websites", "/services/software",
-  "/services/automation", "/case-studies", "/case-studies/restaurant-pos", "/review",
-  "/contact-us", "/licensed-assets"];
 const BASE = process.argv[2] || "http://localhost:3000";
+
+const xml = await (await fetch(`${BASE}/sitemap.xml`)).text();
+const ROUTES = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+  .map((m) => new URL(m[1]).pathname)
+  .sort();
+console.log(`checking ${ROUTES.length} routes from the sitemap\n`);
 
 const b = await puppeteer.launch({ headless: true, args: ["--no-sandbox"] });
 let problems = 0;
@@ -25,24 +28,22 @@ for (const r of ROUTES) {
       if (!el || el.closest("script,style,svg")) continue;
       const t = (n.nodeValue || "").trim();
       if (!t) continue;
-      // licensed-assets is a list of third party URLs, which legitimately contain hyphens
-      const isUrl = /^https?:\/\//.test(t);
-      if (!isUrl && /[-‐-―]/.test(t)) out.push({ kind: "dash", t: t.slice(0, 90) });
-      if (/AerStack/.test(t)) out.push({ kind: "caps", t: t.slice(0, 90) });
+      // the licensed assets page lists third party URLs, which contain hyphens
+      if (/^https?:\/\//.test(t)) continue;
+      if (/[-‐-―]/.test(t)) out.push({ kind: "dash", t: t.slice(0, 100) });
+      if (/AerStack/.test(t)) out.push({ kind: "caps", t: t.slice(0, 100) });
     }
-    // also the document title and meta description
-    const metas = [document.title,
-      (document.querySelector('meta[name=description]') || {}).content || ""];
-    for (const m of metas) {
-      if (/[-‐-―]/.test(m)) out.push({ kind: "dash(meta)", t: m.slice(0, 90) });
-      if (/AerStack/.test(m)) out.push({ kind: "caps(meta)", t: m.slice(0, 90) });
+    for (const m of [document.title,
+      (document.querySelector("meta[name=description]") || {}).content || ""]) {
+      if (/[-‐-―]/.test(m)) out.push({ kind: "dash(meta)", t: m.slice(0, 100) });
+      if (/AerStack/.test(m)) out.push({ kind: "caps(meta)", t: m.slice(0, 100) });
     }
     return out;
   });
 
   if (found.length) {
     problems += found.length;
-    console.log(`\n${r}`);
+    console.log(r);
     for (const f of found) console.log(`   [${f.kind}] ${f.t}`);
   }
   await p.close();

@@ -269,41 +269,6 @@ export const SERVICE_PAGES: ServicePage[] = [
         ],
       },
     ],
-    pricingHeading: "Pricing",
-    pricingCta: "GET STARTED",
-    pricingToggle: ["Monthly", "Yearly", "Save 20% on yearly subscription"],
-    // NOTE(client): these are the figures that were already on the site for the
-    // lead automation packages. The service is now broader, so please confirm
-    // they still reflect what you want to charge.
-    plans: [
-      {
-        name: "Starter Plan 600$ setup",
-        price: "200",
-        features: [
-          "One enquiry source connected",
-          "Automatic reply in under 60 seconds",
-          "Email replies",
-          "Enquiries logged in one place",
-          "Notification to your team",
-          "Monthly summary",
-          "Live in 5 to 7 days",
-        ],
-      },
-      {
-        name: "Pro Plan 1000$ setup",
-        price: "300",
-        features: [
-          "Multiple enquiry sources connected",
-          "Automatic reply by email and WhatsApp or SMS",
-          "Full follow up sequence",
-          "Appointment reminders and booking confirmations",
-          "Automatic booking for ready customers",
-          "Connected to the tools you already use",
-          "Notifications with a summary of each enquiry",
-          "Monthly call to tighten it up",
-        ],
-      },
-    ],
     faqHeading: "Common questions",
     faq: [
       {
