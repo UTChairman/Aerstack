@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SOCIALS } from "@/lib/social";
 import Contact from "@/components/sections/Contact";
 import { Envelope, Phone } from "@/components/ui/icons";
 
@@ -85,28 +86,20 @@ export default function Footer() {
             Follow us:
           </span>
           <div className="flex items-center gap-2.5">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="grid size-10 place-items-center rounded-[12px] bg-white-05 text-white transition-colors hover:bg-white-10"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                <path d="M23 4.9c-.8.4-1.7.7-2.6.8 1-.6 1.7-1.5 2-2.6-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 0 0-7.7 4.1A12.8 12.8 0 0 1 2.5 3.6a4.5 4.5 0 0 0 1.4 6 4.4 4.4 0 0 1-2-.6v.1c0 2.2 1.5 4 3.6 4.4a4.5 4.5 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.6a12.7 12.7 0 0 0 6.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.7-1.4 2.3-2.3z" />
-              </svg>
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="grid size-10 place-items-center rounded-[12px] bg-white-05 text-white transition-colors hover:bg-white-10"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4 0 4.74 2.5 4.74 5.8V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.44-2.2 2.9V21H9z" />
-              </svg>
-            </a>
+            {SOCIALS.map((s) => (
+              <a
+                key={s.key}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="grid size-10 place-items-center rounded-[12px] bg-white-05 text-white transition-colors hover:bg-white-10"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">
+                  <path d={s.path} />
+                </svg>
+              </a>
+            ))}
           </div>
         </div>
 

@@ -1,27 +1,9 @@
 "use client";
 
 import { useFormspree } from "@/lib/useFormspree";
+import { SOCIALS } from "@/lib/social";
 
-/** Newsletter + share card at the foot of each case-study article. */
-const SOCIALS = [
-  {
-    label: "Facebook",
-    d: "M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z",
-  },
-  {
-    label: "Instagram",
-    d: "M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1Zm0 5.6a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4Zm0 6.9a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Zm5.3-7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z",
-  },
-  {
-    label: "LinkedIn",
-    d: "M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4 0 4.74 2.5 4.74 5.8V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.44-2.2 2.9V21H9z",
-  },
-  {
-    label: "Twitter",
-    d: "M23 4.9c-.8.4-1.7.7-2.6.8 1-.6 1.7-1.5 2-2.6-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 0 0-7.7 4.1A12.8 12.8 0 0 1 2.5 3.6a4.5 4.5 0 0 0 1.4 6 4.4 4.4 0 0 1-2-.6v.1c0 2.2 1.5 4 3.6 4.4a4.5 4.5 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.6a12.7 12.7 0 0 0 6.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.7-1.4 2.3-2.3z",
-  },
-];
-
+/** Newsletter and share card at the foot of each project article. */
 export default function NewsletterCard() {
   const { status, error, onSubmit } = useFormspree();
   const submitting = status === "submitting";
@@ -69,13 +51,15 @@ export default function NewsletterCard() {
         <div className="flex items-center gap-2 rounded-full bg-white-05 px-5 py-2.5">
           {SOCIALS.map((s) => (
             <a
-              key={s.label}
-              href="#"
+              key={s.key}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={s.label}
               className="grid size-8 place-items-center rounded-full text-white transition-colors hover:text-brand"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="size-[18px]">
-                <path d={s.d} />
+                <path d={s.path} />
               </svg>
             </a>
           ))}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
+import { SOCIAL_URLS } from "@/lib/social";
 
 export const SITE_NAME = "Aerstack";
 export const OG_IMAGE = "/images/og-image.png";
@@ -82,7 +83,7 @@ export const ORGANISATION = {
       availableLanguage: ["English"],
     },
   ],
-  sameAs: ["https://twitter.com", "https://www.linkedin.com"],
+  sameAs: SOCIAL_URLS,
 };
 
 export const WEBSITE = {
