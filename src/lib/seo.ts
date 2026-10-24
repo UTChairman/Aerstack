@@ -69,7 +69,7 @@ export const ORGANISATION = {
   description:
     "Aerstack builds websites, management software and AI workflows for small and medium businesses.",
   email: "aerstack@gmail.com",
-  telephone: "+92 310 6442188",
+  telephone: "+92 309 9444017",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Islamabad",
@@ -85,7 +85,7 @@ export const ORGANISATION = {
       "@type": "ContactPoint",
       contactType: "sales",
       email: "aerstack@gmail.com",
-      telephone: "+92 310 6442188",
+      telephone: "+92 309 9444017",
       availableLanguage: ["English"],
     },
   ],

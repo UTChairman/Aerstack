@@ -22,7 +22,7 @@ function PinIcon({ className }: { className?: string }) {
 
 const CONTACTS = [
   { Icon: Envelope, text: "aerstack@gmail.com", href: "mailto:aerstack@gmail.com" },
-  { Icon: Phone, text: "+92 310 6442188", href: "tel:+923106442188" },
+  { Icon: Phone, text: "+92 309 9444017", href: "tel:+923099444017" },
   { Icon: PinIcon, text: "We are Fully Remote", href: null },
 ];
 
