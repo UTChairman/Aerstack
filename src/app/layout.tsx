@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { unbounded, inter, satoshi } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
+import { SITE_NAME, OG_IMAGE, OG_W, OG_H, ORGANISATION, WEBSITE } from "@/lib/seo";
+import StructuredData from "@/components/site/StructuredData";
 import SiteBackground from "@/components/site/SiteBackground";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import SiteChrome from "@/components/site/SiteChrome";
 
 const description =
-  "Aerstack is a digital solutions company for small and medium businesses. We build websites that bring in calls, bookings and orders, management software such as POS, inventory, staff and reporting systems, and AI workflows that handle repetitive work.";
+  "Aerstack builds websites, custom management software such as POS and inventory, and AI workflows for small and medium businesses. Tell us about your business.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,15 +35,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     title: "Aerstack | Digital solutions for businesses",
     description,
-    images: [{ url: "/images/og-image.png" }],
+    images: [{ url: OG_IMAGE, width: OG_W, height: OG_H, alt: "Aerstack" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Aerstack | Digital solutions for businesses",
     description,
-    images: ["/images/og-image.png"],
+    images: [OG_IMAGE],
   },
 };
 
@@ -56,6 +60,7 @@ export default function RootLayout({
       className={`${unbounded.variable} ${inter.variable} ${satoshi.variable}`}
     >
       <body>
+        <StructuredData data={[ORGANISATION, WEBSITE]} />
         <SiteChrome
           background={<SiteBackground />}
           nav={<Navbar />}

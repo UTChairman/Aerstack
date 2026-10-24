@@ -13,5 +13,6 @@ export const STATIC_ROUTES = [
   "/case-studies",
   "/review",
   "/contact-us",
-  "/licensed-assets",
+  // /licensed-assets is intentionally absent: it is noindex, so listing it in
+  // the sitemap would ask search engines to index a page that refuses.
 ] as const;

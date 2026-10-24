@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { pageMeta, faqLd, breadcrumbLd } from "@/lib/seo";
+import StructuredData from "@/components/site/StructuredData";
+import { FAQ_ITEMS } from "@/lib/faq-data";
 import Image from "next/image";
 import Pill from "@/components/ui/Pill";
 import Timeline from "@/components/sections/Timeline";
@@ -7,12 +10,12 @@ import Brands from "@/components/sections/Brands";
 import HmvAccordion from "@/components/ui/HmvAccordion";
 import ValueCloud from "@/components/ui/ValueCloud";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/about" },
-  title: "About | Aerstack",
+export const metadata: Metadata = pageMeta({
+  title: "About Aerstack | Websites, Software and AI Workflows",
   description:
-    "A small team building websites, management software and AI workflows for small and medium businesses.",
-};
+    "A small team building websites, management software and AI workflows for small and medium businesses. Meet the founders and see how we work.",
+  path: "/about",
+});
 
 type Person = {
   eyebrow: string;
@@ -182,6 +185,13 @@ function PersonBlock({ p }: { p: Person }) {
 export default function AboutPage() {
   return (
     <main className="flex w-full flex-col items-center justify-center">
+      <StructuredData
+        data={[
+          faqLd(FAQ_ITEMS),
+          breadcrumbLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]),
+        ]}
+      />
+
       {/* Hero banner — image behind, heading pinned to the bottom */}
       <div className="relative flex h-[420px] w-full items-end justify-center gap-2.5 px-5 py-10 md:h-[800px] md:pb-[60px]">
         <div className="absolute inset-x-5 bottom-[70px] top-[60px] overflow-hidden rounded-[30px] md:inset-x-10 md:bottom-[40px] md:top-[90px]">

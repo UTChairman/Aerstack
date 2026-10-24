@@ -53,9 +53,9 @@ function ReviewItem({ r }: { r: Review }) {
             </span>
           </span>
           <div className="flex flex-col justify-center">
-            <h5 className="font-display text-[14px] font-medium leading-[19.6px] text-white">
+            <h3 className="font-display text-[14px] font-medium leading-[19.6px] text-white">
               {r.name}
-            </h5>
+            </h3>
             <span className="font-body text-[11px] uppercase leading-[22px] text-white opacity-80">
               {r.role}
             </span>

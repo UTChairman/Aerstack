@@ -5,7 +5,9 @@ import Pill from "@/components/ui/Pill";
 import ButtonPill from "@/components/ui/ButtonPill";
 import CaseStudyRow from "@/components/ui/CaseStudyRow";
 import NewsletterCard from "@/components/ui/NewsletterCard";
+import StructuredData from "@/components/site/StructuredData";
 import { CASE_STUDIES } from "@/lib/case-studies";
+import { pageMeta, caseStudyLd, breadcrumbLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((cs) => ({ slug: cs.slug }));
@@ -18,11 +20,34 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const cs = CASE_STUDIES.find((c) => c.slug === slug);
-  return {
-    title: cs ? `${cs.detail.title} | Aerstack` : "Our work | Aerstack",
-    description: cs?.detail.subtitle,
-    alternates: { canonical: `/case-studies/${slug}` },
-  };
+  if (!cs) {
+    return pageMeta({
+      title: "Our work | Aerstack",
+      description:
+        "Websites, management software and AI workflows Aerstack has built for small and medium businesses.",
+      path: "/case-studies",
+    });
+  }
+  return pageMeta({
+    title: `${clamp(cs.detail.title, 47)} | Aerstack`,
+    description: padDescription(cs.detail.subtitle),
+    path: `/case-studies/${slug}`,
+    image: `/images/${cs.img}`,
+    type: "article",
+  });
+}
+
+/** Trims to the last whole word inside `max` so titles stay under 60 characters. */
+function clamp(s: string, max: number) {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,.:;]$/, "");
+}
+
+/** Search results cut off below ~70 characters, so short summaries get context. */
+function padDescription(s: string) {
+  const t = s.replace(/\s+/g, " ").trim();
+  return t.length >= 70 ? t.slice(0, 157) : `${t} A project by Aerstack.`;
 }
 
 export default async function CaseStudyPage({
@@ -38,6 +63,22 @@ export default async function CaseStudyPage({
 
   return (
     <main className="flex w-full flex-col items-center justify-center">
+      <StructuredData
+        data={[
+          caseStudyLd({
+            title: cs.detail.title,
+            description: cs.detail.subtitle,
+            path: `/case-studies/${slug}`,
+            image: cs.img,
+          }),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Our work", path: "/case-studies" },
+            { name: cs.detail.title, path: `/case-studies/${slug}` },
+          ]),
+        ]}
+      />
+
       {/* Hero — title panel (left) + square cover (right) */}
       <section className="flex w-full items-center justify-center px-3 pb-5 pt-[100px] md:px-10">
         <div className="flex w-full max-w-[1440px] flex-col items-stretch gap-2.5 md:flex-row">

@@ -58,12 +58,12 @@ export default function ServicePageTemplate({ s }: { s: ServicePage }) {
           <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-2">
             {s.benefits.map((b, i) => (
               <div key={b} className="flex items-center gap-3 rounded-[20px] bg-white-05 p-6">
-                <h4 className="font-display text-[14px] font-normal leading-[21px] text-brand md:text-[16px] md:leading-[24px]">
+                <span className="font-display text-[14px] font-normal leading-[21px] text-brand md:text-[16px] md:leading-[24px]">
                   {String(i + 1).padStart(2, "0")}.
-                </h4>
-                <h4 className="font-display text-[14px] font-normal leading-[21px] text-white md:text-[16px] md:leading-[24px]">
+                </span>
+                <span className="font-display text-[14px] font-normal leading-[21px] text-white md:text-[16px] md:leading-[24px]">
                   {b}
-                </h4>
+                </span>
               </div>
             ))}
           </div>

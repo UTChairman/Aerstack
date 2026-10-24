@@ -7,6 +7,13 @@ import ButtonPill from "@/components/ui/ButtonPill";
 // Framer "spring-physics 212 85 1"
 const spring = { type: "spring" as const, stiffness: 212, damping: 85, mass: 1 };
 
+const AVATARS = [
+  "dUseUtuxWZALl1W4o3xjq8KWc.jpg",
+  "K6cUNifhQFa6qEX3kqNwfqMkiY.jpg",
+  "KuIBzI0VbhnNU4FBscAHrIRO2DQ.jpg",
+  "hn4bVCIy3rXGNQvvwT9Qi3YKiKU.jpg",
+];
+
 const TICKER = "Websites. Management Software. AI Workflows.";
 
 export default function Hero() {
@@ -119,17 +126,32 @@ export default function Hero() {
           A Digital Solutions Company.
         </p>
         <div className="h-px w-full bg-white-10" />
-        {/* What we do. This previously held a stock avatar stack and a star
-            rating, neither of which could be substantiated, so it now states
-            the three services instead. */}
-        <ul className="flex w-full list-none flex-col gap-1.5">
-          {["Websites", "Management software", "AI workflows"].map((s) => (
-            <li key={s} className="flex items-center gap-2.5">
-              <span aria-hidden className="size-1.5 shrink-0 rounded-full bg-brand" />
-              <span className="font-body text-[14px] leading-[20px] text-white-80">{s}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="flex w-full items-center gap-2.5">
+          {/* Avatar stack — 49px, 38px apart */}
+          <div className="flex items-center">
+            {AVATARS.map((a, i) => (
+              <span
+                key={a}
+                className="relative size-[49px] overflow-hidden rounded-full bg-black-05"
+                style={{ marginLeft: i === 0 ? 0 : -11, zIndex: i }}
+              >
+                <Image src={`/images/${a}`} alt="" fill sizes="49px" className="object-cover" />
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-col gap-1">
+            <div className="flex gap-[3px] text-[#ff8442]" aria-hidden>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg key={i} width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 15.9 4.8 18.6l1-5.8L1.5 8.7l5.9-.9L10 1.5Z" />
+                </svg>
+              ))}
+            </div>
+            <span className="whitespace-nowrap font-body text-[13px] leading-none text-white">
+              10+ 5 Star Reviews
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );

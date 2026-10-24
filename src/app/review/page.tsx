@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
+import { pageMeta, breadcrumbLd } from "@/lib/seo";
+import StructuredData from "@/components/site/StructuredData";
 import PageBanner from "@/components/site/PageBanner";
 import PageReviewCard from "@/components/ui/PageReviewCard";
 import ButtonPill from "@/components/ui/ButtonPill";
 import { REVIEWS_LEFT, REVIEWS_RIGHT } from "@/lib/reviews-data";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/review" },
-  title: "Reviews | Aerstack",
-  description: "What business owners say about working with Aerstack.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Reviews | What Business Owners Say About Aerstack",
+  description:
+    "Read what business owners say about working with Aerstack on websites, management software and AI workflow projects.",
+  path: "/review",
+});
 
 export default function ReviewPage() {
   const hasReviews = REVIEWS_LEFT.length + REVIEWS_RIGHT.length > 0;
 
   return (
     <main className="flex w-full flex-col items-center justify-center">
+      <StructuredData
+        data={[breadcrumbLd([{ name: "Home", path: "/" }, { name: "Reviews", path: "/review" }])]}
+      />
       <PageBanner>
         What business owners
         <br />
@@ -24,6 +30,8 @@ export default function ReviewPage() {
       {hasReviews ? (
         /* Two independent columns (masonry), gap 10 */
         <section className="flex w-full flex-col items-center justify-center gap-[30px] px-3 pb-[30px] md:px-10 md:pb-10 lg:pb-[65px]">
+          {/* The cards are h3; this keeps the document outline from skipping h2. */}
+          <h2 className="sr-only">Customer reviews</h2>
           <div className="flex w-full max-w-[1440px] flex-col items-start justify-center gap-2.5 lg:flex-row">
             <div className="flex w-full flex-col gap-2.5">
               {REVIEWS_LEFT.map((r, i) => (

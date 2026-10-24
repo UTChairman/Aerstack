@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { CREDITS_INTRO, ASSET_CREDITS } from "@/lib/credits";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/licensed-assets" },
-  title: "Licensed Assets | Aerstack",
-  description: CREDITS_INTRO,
+  ...pageMeta({
+    title: "Licensed Assets and Image Credits | Aerstack",
+    description:
+      "Attribution for the licensed images and icons used across the Aerstack website, with links to each original source.",
+    path: "/licensed-assets",
+  }),
+  // Attribution page. Useful to visitors, thin for search, so it stays out of
+  // the index while still passing link equity on through its outbound links.
+  robots: { index: false, follow: true },
 };
 
 /**

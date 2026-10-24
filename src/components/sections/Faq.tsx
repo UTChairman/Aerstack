@@ -47,9 +47,9 @@ export default function Faq({
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
                 >
-                  <h4 className="font-display text-[16px] font-light leading-[24px] tracking-[-0.32px] text-white">
+                  <h3 className="font-display text-[16px] font-light leading-[24px] tracking-[-0.32px] text-white">
                     {item.q}
-                  </h4>
+                  </h3>
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25, ease: [0.44, 0, 0.56, 1] }}
